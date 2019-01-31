@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/icon_shop"
+        title="@string/title_shop" />
+    <tab
+        id="@+id/tab_pay"
+        icon="@drawable/icon_pay"
+        title="@string/title_pay" />
+
+    <tab
+        id="@+id/tab_mine"
+        icon="@drawable/icon_mine"
+        title="@string/title_mine" />
+</tabs>

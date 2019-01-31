@@ -55,6 +55,8 @@ public class MainActivity extends BaseActivity {
     Button mGankButton;
     @BindView(R.id.bt_gold)
     Button mGoldButton;
+    @BindView(R.id.bt_one)
+    Button bt_one;
 
     @Autowired(name = RouterHub.ZHIHU_SERVICE_ZHIHUINFOSERVICE)
     ZhihuInfoService mZhihuInfoService;
@@ -142,7 +144,7 @@ public class MainActivity extends BaseActivity {
      *
      * @param view
      */
-    @OnClick({R.id.bt_zhihu, R.id.bt_gank, R.id.bt_gold})
+    @OnClick({R.id.bt_zhihu, R.id.bt_gank, R.id.bt_gold, R.id.bt_one})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_zhihu:
@@ -153,6 +155,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.bt_gold:
                 Utils.navigation(MainActivity.this, RouterHub.GOLD_HOMEACTIVITY);
+                break;
+            case R.id.bt_one:
+                Utils.navigation(MainActivity.this, RouterHub.ONE_TESTACTIVITY);
                 break;
         }
     }

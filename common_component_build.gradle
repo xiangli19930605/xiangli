@@ -22,7 +22,10 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE : "default"]
         testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        //MultiDex分包方法
+        multiDexEnabled true
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]

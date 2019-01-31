@@ -41,4 +41,10 @@ public interface EventBusHub {
     String ZHIHU = "zhihu";//知乎组件
     String GANK = "gank";//干货集中营组件
     String GOLD = "gold";//稀土掘金组件
+
+
+
+
+
+
 }
