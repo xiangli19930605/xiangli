@@ -9,6 +9,11 @@
         icon="@drawable/icon_pay"
         title="@string/title_pay" />
 
+
+    <tab
+        id="@+id/tab_project"
+        icon="@drawable/icon_mine"
+        title="项目" />
     <tab
         id="@+id/tab_mine"
         icon="@drawable/icon_mine"

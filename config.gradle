@@ -64,6 +64,7 @@ ext {
             "SmartRefreshLayout"                :"com.scwang.smartrefresh:SmartRefreshLayout:${version["smartrefreshVersion"]}",
             "SmartRefreshHeader"                : "com.scwang.smartrefresh:SmartRefreshHeader:${version["smartrefreshVersion"]}",
             "banner"                            : "com.youth.banner:banner:1.4.10",
+            "FlycoTabLayout_Lib"                : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
             //rx1
             "rxandroid"                : "io.reactivex:rxandroid:1.2.1",
             "rxjava"                   : "io.reactivex:rxjava:1.3.0",

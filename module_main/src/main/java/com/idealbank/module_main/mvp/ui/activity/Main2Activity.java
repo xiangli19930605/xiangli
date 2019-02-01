@@ -16,6 +16,7 @@ import com.idealbank.module_main.mvp.presenter.MainPresenter;
 import com.idealbank.module_main.mvp.ui.fragment.HomeFragment;
 import com.idealbank.module_main.mvp.ui.fragment.MineFragment;
 import com.idealbank.module_main.mvp.ui.fragment.PayFragment;
+import com.idealbank.module_main.mvp.ui.fragment.ProjectFragment;
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.roughike.bottombar.BottomBar;
@@ -43,8 +44,10 @@ public class Main2Activity extends BaseActivity<MainPresenter> implements MainCo
             mReplace = 0;
         } else if (tabId == R.id.tab_pay) {
             mReplace = 1;
-        } else if (tabId == R.id.tab_mine) {
+        } else if (tabId == R.id.tab_project) {
             mReplace = 2;
+        }else if (tabId == R.id.tab_mine) {
+            mReplace = 3;
         }
         FragmentUtils.hideAllShowFragment(mFragments.get(mReplace));
     };
@@ -71,22 +74,26 @@ public class Main2Activity extends BaseActivity<MainPresenter> implements MainCo
         HomeFragment homeFragment;
         MineFragment mineFragment;
         PayFragment payFragment;
+        ProjectFragment projectFragment;
         if (savedInstanceState == null) {
             homeFragment = HomeFragment.newInstance();
             payFragment = PayFragment.newInstance();
             mineFragment = MineFragment.newInstance();
+            projectFragment = ProjectFragment.newInstance();
         } else {
             mReplace = savedInstanceState.getInt("2");
             FragmentManager fm = getSupportFragmentManager();
             homeFragment = (HomeFragment) FragmentUtils.findFragment(fm, HomeFragment.class);
             payFragment = (PayFragment) FragmentUtils.findFragment(fm, PayFragment.class);
             mineFragment = (MineFragment) FragmentUtils.findFragment(fm, MineFragment.class);
+            projectFragment = (ProjectFragment) FragmentUtils.findFragment(fm, ProjectFragment.class);
 
         }
         if (mFragments == null) {
             mFragments = new ArrayList<>();
             mFragments.add(payFragment);
             mFragments.add(homeFragment);
+            mFragments.add(projectFragment);
             mFragments.add(mineFragment);
         }
         FragmentUtils.addFragments(getSupportFragmentManager(), mFragments, R.id.main_frame, 0);
